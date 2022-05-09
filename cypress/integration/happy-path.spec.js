@@ -21,6 +21,7 @@ describe("Happy path coverage", () => {
     cy.get("#zip").clear();
     cy.get("#zip").type("abc123");
     cy.get('[data-cy="submit-form"]').click();
+    cy.reload();
     cy.contains("snow@winterfell.com").should("exist");
   });
 
